@@ -17,14 +17,16 @@
     <title>Document</title>
   </head>
   <body>
-    <a href="/pets"> Back </a>
-    <div>
+    <div class="container">
+      <a href="/pets" class="back-link"> Back </a>
       <h2>{{ pet.pet_name }}</h2>
-      <img
+      <div class="pets-container">
+        <img
         src="{{ pet.pet_photo}}"
         alt="Photo of pet"
       />
       <p>{{ pet.pet_fact }}</p>
+      </div>
     </div>
   </body>
 </html>

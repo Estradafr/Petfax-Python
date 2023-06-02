@@ -18,18 +18,25 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Welcome to PetFax!</h1>
-    <div>
-      <!-- leave the % next to the {} -->
+    <div class="container">
+      <h1>Welcome to PetFax!</h1>
+    <div class="pets-container">
       {% for pet in pets %}
-      <h2>
-        <a href="{{pet.pet_id}}">{{ pet.pet_name }} </a>
-      </h2>
-      <img
-        src="{{ pet.pet_photo}}"
-        alt="Photo of pet"
-      />
+      <div class="pet">
+        <h2>
+          <a href="{{pet.pet_id}}">{{ pet.pet_name }} </a>
+        </h2>
+        <img
+          src="{{ pet.pet_photo}}"
+          alt="Photo of pet"
+        />
+      </div>
       {% endfor %}
+    </div>
+    <br>
+    <div>
+      We'd love to learn more fun facts!
+      <a href="/facts/new">Submit some here.</a>
     </div>
   </body>
 </html>
